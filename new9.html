@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try and Catch Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Try and Catch Error Handling</h2>
+    <button onclick="generateError()">Click to Generate Error</button>
+    <p id="message"></p>
+
+    <script>
+        function generateError() {
+            try {
+                // Intentionally causing an error by calling an undefined function
+                undefinedFunction();
+            } catch (error) {
+                // Displaying error message
+                document.getElementById("message").innerHTML = "An error occurred: " + error.message;
+                document.getElementById("message").classList.add("error");
+            }
+        }
+    </script>
+</body>
+
+</html>
